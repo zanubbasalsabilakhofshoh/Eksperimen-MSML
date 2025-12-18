@@ -24,7 +24,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pandas scikit-learn numpy joblib
+          pip install pandas scikit-learn numpy joblib pandas
 
       - name: Run preprocessing script
         working-directory: ./preprocessing
