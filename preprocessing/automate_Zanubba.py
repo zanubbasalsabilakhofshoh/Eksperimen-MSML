@@ -1,4 +1,8 @@
 
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split
+
 def load_dataset(path):
     return pd.read_csv(path)
 
@@ -41,9 +45,8 @@ def preprocess_pipeline(path, target_column):
     X_train, X_test, y_train, y_test = split_data(df, target_column)
 
     return df, X_train, X_test, y_train, y_test, scaler
-from automate_Zanubba import preprocess_pipeline
 
-PATH = "/content/drive/MyDrive/Eksperimen_SML_Zanubba/preprocessing/heart_disease_preprocessing/heart_disease_preprocessing.csv"
+PATH = "heart_disease_preprocessing.csv"
 TARGET = "target"
 
 df_clean, X_train, X_test, y_train, y_test, scaler = preprocess_pipeline(
